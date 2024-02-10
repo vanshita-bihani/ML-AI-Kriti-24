@@ -43,6 +43,7 @@ model.add(Dense(len(mlb.classes_), activation='sigmoid'))
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 #model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
+
 batch_size = 64
 epochs = 5
 
@@ -84,6 +85,7 @@ final_output = pd.DataFrame(to_add, columns=sub_format.columns)
 
 # Save the DataFrame to a CSV file
 final_output.to_csv('submission_corrected11.csv', index=False)
+
 
 to_add=[]
 cnt=0
